@@ -111,10 +111,10 @@ public class Controller {
 
             for (Contract contract: contracts) {
                 if(DAYS.between(contract.getDataChek().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), LocalDate.now()) > 60){
-                    contract.setChek(true);
+                    contract.setChek(false);
                 }
                 else{
-                    contract.setChek(false);
+                    contract.setChek(true);
                 }
             }
             usersData.addAll(contracts);
